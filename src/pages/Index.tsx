@@ -136,7 +136,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen overflow-hidden">
+    <div className="min-h-screen overflow-x-hidden overflow-y-auto">
       <CosmicBackground />
 
       {/* Header */}
@@ -153,9 +153,9 @@ const Index = () => {
 
       {/* Main Content */}
       <main className="relative z-10 px-6 pb-32">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 h-[calc(100vh-300px)]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 min-h-[600px]">
           {/* Radar Section */}
-          <div className="lg:col-span-2 flex items-center justify-center">
+          <div className="lg:col-span-2 flex items-center justify-center min-h-[600px]">
             <RadarScanner
               developers={mockDevelopers}
               onDeveloperClick={handleDeveloperClick}
@@ -163,7 +163,7 @@ const Index = () => {
           </div>
 
           {/* Developers List */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 h-[600px]">
             <DevelopersList
               developers={mockDevelopers}
               onDeveloperClick={handleDeveloperClick}
